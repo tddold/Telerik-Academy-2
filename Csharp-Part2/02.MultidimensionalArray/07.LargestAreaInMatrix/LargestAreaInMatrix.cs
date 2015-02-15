@@ -29,7 +29,7 @@ class LargestAreaInMatrix
         {4, 3, 1, 3, 3, 1},
         {4, 3, 3, 3, 1, 1}
         };
-          search(matrix,0):
+        search(matrix, 0);
     }
 
     public static void search(int[,] matrix, int vertex)

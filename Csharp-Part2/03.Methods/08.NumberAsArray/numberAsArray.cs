@@ -14,16 +14,16 @@ class numberAsArray
     static void Main()
     {
         Console.WriteLine("Enter two integer numbers:");
-        int NumberX = int.Parse(Console.ReadLine());
-        int NumberY = int.Parse(Console.ReadLine());
-        List<char> arrayX = NumberX.ToString().ToList();
-        List<char> arrayY = NumberY.ToString().ToList(); 
-        int result=Adding(arrayX,arrayY);
+        string NumberX = Console.ReadLine();
+        string NumberY = Console.ReadLine();
+        List<char> arrayX = NumberX.ToList();
+        List<char> arrayY = NumberY.ToList(); 
+        string result=Adding(arrayX,arrayY);
         Console.WriteLine("The result of adding the two numbers is:");
         Console.WriteLine(result);
     }
     
-    static int Adding(List<char> arrayX, List<char> arrayY)
+    static string Adding(List<char> arrayX, List<char> arrayY)
     {
         arrayX.Reverse();
         arrayY.Reverse();
@@ -64,8 +64,8 @@ class numberAsArray
         }
         string rawString=string.Join("",comb);
         string reversedString = Reverse(rawString);
-        int finalInt = int.Parse(reversedString);
-        return finalInt;
+        string finalNum = reversedString;
+        return finalNum;
     }
     public static string Reverse(string s)
     {

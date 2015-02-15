@@ -16,7 +16,7 @@ class appearanceCount
         //*Zero tests
         //int[] arrayOfInts = { 2, 4, 5, 1, 2, 4, 5, 6 };        
         int[] arrayOfInts = { 2, 4, -5, -1, 2, 4, -5, 6 };
-        
+
         //For manual entering you can uncomment this code:
         //Console.WriteLine("Enter the length of the array:");
         //int len=int.Parse(Console.ReadLine());
@@ -30,10 +30,13 @@ class appearanceCount
         Console.WriteLine("Enter the checked number:");
         int number = int.Parse(Console.ReadLine());
 
-        checkNumber(arrayOfInts, number);
+        int numberCountInArray= checkNumber(arrayOfInts, number);
+        Console.WriteLine("The number {0} appears in the given array {1} time(s).", number, numberCountInArray);
+        Console.WriteLine("Result from the checking program:");
+        Console.WriteLine(CheckAppearanceTest());
     }
 
-    static void checkNumber(int[] array,int number)
+    public static int checkNumber(int[] array, int number)
     {
         int numberCountInArray = 0;
         for (int i = 0; i < array.Length; i++)
@@ -43,7 +46,16 @@ class appearanceCount
                 numberCountInArray++;
             }
         }
-        Console.WriteLine("The number {0} appears in the given array {1} time(s).",number,numberCountInArray);
+        return numberCountInArray;
+      
+    }
+    private static string CheckAppearanceTest()
+    {
+        if (checkNumber(new int[] { 2, 4, -5, -1, 2, 4, -5, 6 }, 8) !=0  ||
+        checkNumber(new int[] { -2,-3, -4}, -2) != 1)
+            return "Fail";
+        return "Success";
     }
 }
 
+    
