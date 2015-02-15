@@ -29,6 +29,19 @@ class sortingArray
         //}      
         Console.WriteLine("Enter start index:");
         int startIndex = int.Parse(Console.ReadLine());
+        bool isBig = true;
+        while (isBig)
+        {
+            if (startIndex >= arrayOfInts.Length)
+            {
+                Console.WriteLine("The index is bigger than the length of the array. Please enter new index again.");
+                startIndex = int.Parse(Console.ReadLine());
+            }
+            else
+            {
+                isBig = false;
+            }           
+        }
         int maxNumber = checkForBiggestNumber(arrayOfInts, startIndex);
         Console.WriteLine("The maximal number in the portion of the array");
         Console.WriteLine("started from {0} is {1}.", startIndex, maxNumber);
