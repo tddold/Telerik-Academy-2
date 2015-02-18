@@ -9,8 +9,8 @@ class sumInArray
     static void Main()
     {
         //For thorough check you can comment the row below and uncomment the row which have //* above them
-        //int[] arrayOfNumbers = { 4, 3, 1, 4, 2, 5, 8 };
-        int[] arrayOfNumbers = { 4, 3, 1, 4, 2, 4, -12,10,1 };
+        int[] arrayOfNumbers = { 4, 3, 1, 4, 2, 5, 8 };
+        //int[] arrayOfNumbers = { 4, 3, 1, 4, 2, 4, -12,10,1 };
         int sum = 11;
         
         //*coment ALL until the next for THOROUGH check//*       

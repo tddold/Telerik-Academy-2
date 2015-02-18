@@ -20,23 +20,23 @@ class SeqnMatrix
         //int numberM=int.Parse(Console.ReadLine());
         //Console.WriteLine("Enter the matrix:");
         int numberN=3;
-        int numberM = 3;
-        string[,] matrix = new string[3,4]
-        {
-            {"ha","fifi","ho","hi"},
-            {"fo","ha","hi","xx"},
-            {"xxx","ho","ha","xx"}           
-        };  
-
+        int numberM = 4;
         //string[,] matrix = new string[3,4]
         //{
-        //    {"z","a","c","a"},
-        //    {"c","c","c","c"},
-        //    {"c","ho","ha","xx"}           
-        //}; 
+        //    {"ha","fifi","ho","hi"},
+        //    {"fo","ha","hi","xx"},
+        //    {"xxx","ho","ha","xx"}           
+        //};
+
+        string[,] matrix = new string[3,4]
+        {
+            {"z","a","c","a"},
+            {"c","c","c","c"},
+            {"c","ho","ha","xx"}           
+        };
         // string[,] matrix = new string[3,3]
         //{
-		//{"s",	"qq","s"},
+        //{"s",	"qq","s"},
         //{"pp", 	"pp","s"},
         //{"pp", 	"qq","s"},
         //};

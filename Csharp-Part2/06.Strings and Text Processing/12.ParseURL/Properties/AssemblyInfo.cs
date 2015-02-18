@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("03.SequenceNMatrixSolution2")]
+[assembly: AssemblyTitle("12.ParseURL")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("03.SequenceNMatrixSolution2")]
+[assembly: AssemblyProduct("12.ParseURL")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("75e3afdc-7e8c-404c-bd91-00cc03c59173")]
+[assembly: Guid("e4cab3bc-6552-4036-a34d-374a979d5fd3")]
 
 // Version information for an assembly consists of the following four values:
 //

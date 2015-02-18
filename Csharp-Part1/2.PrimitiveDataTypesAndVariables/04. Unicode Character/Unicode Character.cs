@@ -11,7 +11,7 @@ class unicodeCharacter
     static void Main()
     {
         char sign=(char)0x2a;
-        Console.WriteLine("{0}",sign);
+        Console.WriteLine("\\u{0:X4}",sign);
     }
 }
 

@@ -13,9 +13,9 @@ class maxSumInArray
     {
         //For check you can comment the row below and comment the row which have //* above them
         //TESTS:
-        int[] arrayOfNumbers = { 2, 3, -6, -1, 2, -1, 6, 4, -8, 8 };
+        //int[] arrayOfNumbers = { 2, 3, -6, -1, 2, -1, 6, 4, -8, 8 };
         //int[] arrayOfNumbers = { -1, -3, -6, -1, -2, -1, -3, -4, -8, -8 };
-        //int[] arrayOfNumbers = { 2, 3, -6, -1, 2, -12, 6, 4, -8, 8 };
+        int[] arrayOfNumbers = { 2, 3, -6, -1, 2, -12, 6, 4, -8, 8 };
         //int[] arrayOfNumbers = { 2, 3, -6, -1, 2, -1, 6, 4, -8,22 };
         int len = 10;
         //*

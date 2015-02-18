@@ -40,7 +40,7 @@ class fallingRocks
     static void Main()
     {
         int field = 50;
-        Console.BufferHeight = Console.WindowHeight = 20;
+        Console.BufferHeight = Console.WindowHeight = 5;
         Console.BufferWidth = Console.WindowWidth = 61;
         Dwarf userDwarf = new Dwarf();
         int livesCount = 5;
