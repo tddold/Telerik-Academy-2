@@ -18,13 +18,17 @@ class FormatNumber
         Console.WriteLine("Enter number:");
         double number = double.Parse(Console.ReadLine());
         Console.WriteLine("Decimal number:");
-        Console.WriteLine("{0,15}",number);
+        string formatDec = string.Format("{0,15}", number);
+        Console.WriteLine(formatDec);       
         Console.WriteLine("Hex numbers:");
-        Console.WriteLine("{0,15:X}", (int)number);
-        Console.WriteLine("Percentages:");     
-        Console.WriteLine("{0,15:P1}", number/100);
+        string formatHex = String.Format("{0,15:X}", (int)number);
+        Console.WriteLine(formatHex);
+        Console.WriteLine("Percentages:");
+        string formatPer = String.Format("{0,15:P1}", number / 100);
+        Console.WriteLine(formatPer);
         Console.WriteLine("Scientific notation:");
-        Console.WriteLine("{0,15:e}", number);
+        string formatSci = String.Format("{0,15:e}", number);
+        Console.WriteLine(formatSci);
     }
 }
 

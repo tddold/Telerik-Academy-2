@@ -14,15 +14,15 @@ class CorrectBrackets
     static void Main()
     {
         Console.WriteLine("Enter math expression:");
-        string input = Console.ReadLine();
+        string input = ")(a+b))";
+        Console.WriteLine(input);
+        //string input = "((a+b)/5-d)";
         bool incorrect = false;
-        int countLeftPar = input.Split('(').Length - 1;
-        int countRightPar = input.Split(')').Length - 1;
-        if (countLeftPar != countRightPar)
+        if (input.IndexOf('(') > input.IndexOf(')'))
         {
             incorrect = true;
         }
-
+        Console.WriteLine("The brackets are put correctly:{0}",!incorrect);
         
     }
 }

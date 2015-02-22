@@ -26,7 +26,5 @@ class nFactorial
             product *= i;
         }
         return product;
-    }
-    
+    }    
 }
-

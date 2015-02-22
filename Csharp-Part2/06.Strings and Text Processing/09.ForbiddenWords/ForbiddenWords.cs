@@ -17,12 +17,19 @@ class ForbiddenWords
     static void Main()
     {
         Console.WriteLine("Enter text:");
-        string input = Console.ReadLine();
+        string input = "Microsoft announced its next generation PHP compiler today. It is based on .NET Framework 4.0 and is implemented as a dynamic language in CLR.";
+        string[] forbiddenWords = { "PHP", "CLR", "Microsoft" };
+        //*For thoroug check ucnomment bellow and comment the two rows above
+        //*For thoroug check ucnomment bellow and comment the two rows above
+        //*For thoroug check ucnomment bellow and comment the two rows above
+        //string input = Console.ReadLine();
         //string[] arrayOfWords = input.Split(' ');
         Console.WriteLine("Enter forbidden words on the next row");
-        string[] stringSeparators = new string[] {", "};
-        string rowWords=Console.ReadLine();
-        string[] forbiddenWords = rowWords.Split(stringSeparators, StringSplitOptions.None);
+        //string[] stringSeparators = new string[] {", "};
+        //string rowWords=Console.ReadLine();
+        //string[] forbiddenWords = rowWords.Split(stringSeparators, StringSplitOptions.None);
+        
+        
         StringBuilder sb=new StringBuilder();
         int pos=-1;
         int start = 0;

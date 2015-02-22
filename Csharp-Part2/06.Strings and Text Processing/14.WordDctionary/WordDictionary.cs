@@ -37,7 +37,7 @@ class WordDictionary
         bool isChecking=true;
         while (isChecking)
         {
-            Console.WriteLine("Enter string index: ");
+            Console.WriteLine("Enter string index for check from the dictionary: ");
             Console.WriteLine("(if you want to end the cycle type END):");
             string index = Console.ReadLine();
             if (dictionary.ContainsKey(index))
