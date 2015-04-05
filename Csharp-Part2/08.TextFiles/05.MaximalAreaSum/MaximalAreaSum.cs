@@ -24,7 +24,7 @@ class MaximalAreaSum
 {
     static void Main()
     {
-        StreamReader reader = new StreamReader(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\05.MaximalAreaSum\matrix.txt");
+        StreamReader reader = new StreamReader(@"..\..\matrix.txt");
 
         using (reader)
         {         
@@ -65,7 +65,7 @@ class MaximalAreaSum
 
                 }
             }
-            StreamWriter writer = new StreamWriter(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\05.MaximalAreaSum\max.txt");
+            StreamWriter writer = new StreamWriter(@"..\..\max.txt");
             using (writer)
             {
                 writer.Write("Maximal sum is: {0}", maxSum);

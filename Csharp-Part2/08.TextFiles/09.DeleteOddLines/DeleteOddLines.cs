@@ -14,11 +14,11 @@ class DeleteOddLines
 {
     static void Main()
     {
-        string path = @"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\09.DeleteOddLines\textfile.txt";
+        string path = @"..\..\textfile.txt";
         StreamReader reader = new StreamReader(path);
         using (reader)
         {
-            StreamWriter streamWriter = new StreamWriter(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\09.DeleteOddLines\temp.txt");
+            StreamWriter streamWriter = new StreamWriter(@"..\..\temp.txt");
             using (streamWriter)
             {
                 int lineNumber = 0;
@@ -36,9 +36,9 @@ class DeleteOddLines
             }
         }
         Console.WriteLine("The odd lines are deleted from the input file : {0}",path);
-        File.Delete(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\09.DeleteOddLines\textfile.txt");
-        File.Move(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\09.DeleteOddLines\temp.txt",
-            @"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\09.DeleteOddLines\textfile.txt");
+        File.Delete(@"..\..\textfile.txt");
+        File.Move(@"..\..\temp.txt",
+            @"..\..\textfile.txt");
     }
 }
 

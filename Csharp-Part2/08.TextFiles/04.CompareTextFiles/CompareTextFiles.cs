@@ -15,7 +15,7 @@ class CompareTextFiles
 {
     static void Main()
     {
-        String directory = @"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\04.CompareTextFiles";
+        String directory = @"..\..\";
         String[] linesA = File.ReadAllLines(Path.Combine(directory, "textfile1.txt"));
         String[] linesB = File.ReadAllLines(Path.Combine(directory, "textfile2.txt"));
         int countOfEqualLines = 0;

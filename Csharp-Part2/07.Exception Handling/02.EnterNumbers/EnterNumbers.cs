@@ -18,32 +18,40 @@ class EnterNumbers
         Console.WriteLine("Enter the start and the end of the range:");
         int start=int.Parse(Console.ReadLine());
         int end=int.Parse(Console.ReadLine());
-        for (int i = 0; i < 10; i++)
+        int count = 0;
+        while (count<10)
         {
-            int number = ReadNumber(start, end);
+            int number = int.Parse(Console.ReadLine());
+            bool isValid = ReadNumber(start, end,number);
+            if (isValid == true)
+            {
+                count++;
+            }
         }
     }
-    static  int ReadNumber(int start, int end)
+    static  bool ReadNumber(int start, int end,int number)
     {
-        int number=0;   
+        bool isValid = true;
         try
         {               
             Console.WriteLine("Enter number in the range {0} - {1}", start, end);
-            number = int.Parse(Console.ReadLine());
+           
             if (number >= start && number <= end)
             {
-                Console.WriteLine("{0} is in the range", number);
+                Console.WriteLine("{0} is in the range", number);                
             }
             else
             {
                 throw new ArgumentOutOfRangeException("Number is out of range");
+                
             }
         }
         catch(Exception)
         {
-            Console.WriteLine("Invalid number");           
+            Console.WriteLine("Invalid number");
+            isValid = false;
         }       
-        return number;
+        return isValid;
        
     }
 }

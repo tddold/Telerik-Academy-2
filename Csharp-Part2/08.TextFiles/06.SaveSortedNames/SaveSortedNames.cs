@@ -22,7 +22,7 @@ class SaveSortedNames
 {
     static void Main()
     {
-        StreamReader reader = new StreamReader(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\06.SaveSortedNames\names.txt");
+        StreamReader reader = new StreamReader(@"..\..\names.txt");
         using (reader)
         {
             string line = string.Empty;
@@ -33,7 +33,7 @@ class SaveSortedNames
                 names.Add(line);
             } while (line != null);
             names.Sort();
-            StreamWriter writer = new StreamWriter(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\06.SaveSortedNames\sorted_names.txt");
+            StreamWriter writer = new StreamWriter(@"..\..\sorted_names.txt");
             using (writer)
             {
                 for (int i=0;i<names.Count;i++)

@@ -23,18 +23,15 @@ class SquareRoot
             double result = Math.Sqrt(number);
             Console.WriteLine(result);
         }
-        catch  (Exception error)
+        catch  (Exception)
         {
-            //Console.WriteLine(error);
+           
             Console.WriteLine("Invalid number");
         }
         finally
         {
             Console.WriteLine("Good bye");
         }      
-
-
-
     }
 }
 

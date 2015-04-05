@@ -26,7 +26,7 @@ class SumIntegers
             int number = int.Parse(arrayOfStrings[i]);
             sum += number;
         }
-        Console.WriteLine("The sum of teh numbers is:");
+        Console.WriteLine("The sum of the numbers is:");
         Console.WriteLine(sum);
     }
 }

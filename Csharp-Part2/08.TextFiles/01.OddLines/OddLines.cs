@@ -12,7 +12,7 @@ class OddLines
 {
     static void Main()
     {
-        StreamReader reader = new StreamReader(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\01.OddLines\textfile.txt");
+        StreamReader reader = new StreamReader(@"..\..\textfile.txt");
         using (reader)
         {
             int lineNumber = 0;

@@ -13,7 +13,7 @@ class ReplaceSubString
 {
     static void Main()
     {
-        StreamReader reader = new StreamReader(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\07.ReplaceSubString\start.txt");
+        StreamReader reader = new StreamReader(@"..\..\start.txt");
         using (reader)
         {
             StringBuilder sb = new StringBuilder();
@@ -39,7 +39,7 @@ class ReplaceSubString
                 }
                 
             }
-            StreamWriter streamWriter = new StreamWriter(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\07.ReplaceSubString\end.txt");
+            StreamWriter streamWriter = new StreamWriter(@"..\..\end.txt");
             using (streamWriter)
             {
                 streamWriter.Write(sb.ToString());               

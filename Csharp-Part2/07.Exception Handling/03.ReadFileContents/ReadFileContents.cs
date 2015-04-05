@@ -17,28 +17,55 @@ class ReadFileContents
     {
         try
         {
+            //Filename and path entering is hardcoded
+            //Filename and path entering is hardcoded
+            //Filename and path entering is hardcoded
             Console.WriteLine("Enter file path and name:");
             //string path = Console.ReadLine();
-            string path = @"D:\Telerik\Telerik-Academy\Csharp-Part2\07.Exception Handling\03.ReadFileContents\text.txt";
+            string path = @"..\..\text.txt";
             string text = System.IO.File.ReadAllText(path);
             Console.WriteLine("The text in the file is:");
             Console.WriteLine(text);
         }
-        catch (DirectoryNotFoundException ex) 
+        catch (FileLoadException exception)
         {
-            Console.WriteLine(ex.Message);           
+            Console.WriteLine(exception.Message);
         }
-        catch (FileNotFoundException ex)
+        catch (EndOfStreamException exception)
         {
-            Console.WriteLine(ex.Message);      
+            Console.WriteLine(exception.Message);
         }
-        catch (PathTooLongException ex)
-        {         
-            Console.WriteLine(ex.Message);
-        }
-        catch (NotSupportedException ex)
+        catch (DriveNotFoundException exception)
         {
-            Console.WriteLine(ex.Message);
+            Console.WriteLine(exception.Message);
+        }
+        catch (ArgumentException exception)
+        {
+            Console.WriteLine(exception.Message);
+        }
+        catch (PathTooLongException exception)
+        {
+            Console.WriteLine(exception.Message);
+        }
+        catch (FileNotFoundException exception)
+        {
+            Console.WriteLine(exception.Message);
+        }
+        catch (DirectoryNotFoundException exception)
+        {
+            Console.WriteLine(exception.Message);
+        }
+        catch (IOException exception)
+        {
+            Console.WriteLine(exception.Message);
+        }
+        catch (UnauthorizedAccessException exception)
+        {
+            Console.WriteLine(exception.Message);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Exception caught!\n{0}:{1}", ex.GetType().Name, ex.Message);
         }
 
     }

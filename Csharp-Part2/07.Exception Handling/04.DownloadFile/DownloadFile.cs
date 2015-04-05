@@ -23,18 +23,17 @@ class DownloadFile
                 string path = Console.ReadLine();
                 Console.Write("Enter the file name with extension:");
                 string fileName = Console.ReadLine();
-                Console.WriteLine("Example");
+                Console.WriteLine("Example downloading ninja.jpg.");
                 Client.DownloadFile("http://telerikacademy.com/Content/Images/news-img01.png", "ninja.png");
-                Client.DownloadFile(path, fileName);
+                //Client.DownloadFile(path, fileName);
+                //The file is in debug folder
+                Console.WriteLine(@"The file ""ninja.jpg"" is in the debug folder");
             }
         }
-        catch (ArgumentException ex)
+        catch (Exception ex)
         {
             Console.WriteLine("Exception caught!\n{0} - {1}", ex.GetType().Name, ex.Message); 
         }
-        
-
-
     }
 }
 

@@ -15,7 +15,7 @@ class PrefixTest
 {
     static void Main()
     {
-        StreamReader reader = new StreamReader(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\11.PrefixTest\textfile.txt");
+        StreamReader reader = new StreamReader(@"..\..\textfile.txt");
         string alltext = string.Empty; 
         using (reader)
         {
@@ -39,14 +39,14 @@ class PrefixTest
         }
         result = sb.ToString();
             Console.Write(result);
-        StreamWriter writer= new StreamWriter(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\11.PrefixTest\temp.txt");
+            StreamWriter writer = new StreamWriter(@"..\..\temp.txt");
         using (writer)
         {
             writer.Write(result);
         }
-        File.Delete(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\11.PrefixTest\textfile.txt");
-        File.Move(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\11.PrefixTest\temp.txt",
-            @"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\11.PrefixTest\textfile.txt");
+        File.Delete(@"..\..\textfile.txt");
+        File.Move(@"..\..\temp.txt",
+            @"..\..\textfile.txt");
     }
 }
 

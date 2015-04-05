@@ -13,7 +13,7 @@ class ReplaceWholeWord
 {
     static void Main()
     {
-        StreamReader reader = new StreamReader(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\08.ReplaceWholeWord\start.txt");
+        StreamReader reader = new StreamReader(@"..\..\start.txt");
         Console.WriteLine("Enter word for change:");
         string word = Console.ReadLine();
         string output = string.Empty;
@@ -24,7 +24,7 @@ class ReplaceWholeWord
             Regex rgx = new Regex(@"\bstart\b");
             output = rgx.Replace(allText, "finish");
         }
-        StreamWriter streamWriter = new StreamWriter(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\08.ReplaceWholeWord\end.txt");
+        StreamWriter streamWriter = new StreamWriter(@"..\..\End.txt");
         using (streamWriter)
         {
             streamWriter.Write(output);

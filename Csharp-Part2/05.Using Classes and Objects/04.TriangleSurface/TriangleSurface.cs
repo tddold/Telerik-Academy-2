@@ -76,9 +76,10 @@ class TriangleSurface
         double sideA = double.Parse(Console.ReadLine());
         Console.Write("Side b:");
         double sideB = double.Parse(Console.ReadLine());
-        Console.Write("Angle:");
-        double angle = double.Parse(Console.ReadLine());        
-        double surfaceTwoSidesAngle = (Math.Sin(angle)*sideA*sideB)/2;
+        Console.Write("Angle in grad:");
+        double angle = double.Parse(Console.ReadLine());
+        double angleInRadians = angle*Math.PI/180;       
+        double surfaceTwoSidesAngle = (Math.Sin(angleInRadians)*sideA*sideB)/2;
         return surfaceTwoSidesAngle;
     }
 }

@@ -15,7 +15,7 @@ class ExtractTextFromXML
 {
     static void Main()
     {
-        StreamReader reader = new StreamReader(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\10.ExtractTextFromXML\letter.xml");
+        StreamReader reader = new StreamReader(@"..\..\letter.xml");
         string alltext=string.Empty;
         using (reader)
         {
@@ -26,7 +26,7 @@ class ExtractTextFromXML
 
         string result=rgx.Replace(alltext,"");
         Console.WriteLine(result);
-        StreamWriter writer = new StreamWriter(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\10.ExtractTextFromXML\letter_amended.xml");
+        StreamWriter writer = new StreamWriter(@"..\..\letter_amended.xml");
         using (writer)
         {
             writer.Write(result);

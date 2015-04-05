@@ -21,7 +21,7 @@ class CountWords
     {
         try
         {
-            StreamReader reader = new StreamReader(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\13.CountWords\words.txt");
+            StreamReader reader = new StreamReader(@"..\..\words.txt");
             string words = string.Empty;
             List<string> list = new List<string>();
             using (reader)
@@ -30,7 +30,7 @@ class CountWords
                 string resultForTheList = Regex.Replace(words, "[^a-zA-Z0-9_.\n]+", "", RegexOptions.Compiled);
                 list = resultForTheList.Split(' ', ',', '\n').ToList();
             }
-            StreamReader reader2 = new StreamReader(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\13.CountWords\test.txt");
+            StreamReader reader2 = new StreamReader(@"..\..\test.txt");
             string textForCheck = reader2.ReadToEnd();
             string[] source = textForCheck.Split(new char[] { '.', '?', '!', ' ', ';', ':', ',', '\n' }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -48,7 +48,7 @@ class CountWords
             var sortedDict = from entry in myDict orderby entry.Value descending select entry;
 
 
-            StreamWriter writer = new StreamWriter(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\13.CountWords\result.txt");
+            StreamWriter writer = new StreamWriter(@"..\..\result.txt");
             using (writer)
             {
 
@@ -74,6 +74,10 @@ class CountWords
             Console.WriteLine(ex.Message);
         }
         catch (FileNotFoundException ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
         }

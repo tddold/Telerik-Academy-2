@@ -13,8 +13,8 @@ class LineNumbers
 {
     static void Main()
     {
-        StreamReader reader = new StreamReader(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\03.LineNumbers\textfile.txt");
-        StreamWriter writer = new StreamWriter(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\03.LineNumbers\newtext.txt");
+        StreamReader reader = new StreamReader(@"..\..\textfile.txt");
+        StreamWriter writer = new StreamWriter(@"..\..\newtext.txt");
         using (reader)
         {
             using (writer)

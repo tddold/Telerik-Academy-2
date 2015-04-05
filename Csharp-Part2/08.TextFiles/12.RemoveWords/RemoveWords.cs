@@ -17,7 +17,7 @@ class RemoveWords
     {
         try
         {
-            StreamReader reader = new StreamReader(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\12.RemoveWords\removewords.txt");
+            StreamReader reader = new StreamReader(@"..\..\removewords.txt");
             string removingWords = string.Empty;
             List<string> blackList = new List<string>();
             using (reader)
@@ -26,7 +26,7 @@ class RemoveWords
                 string resultForRemovingList = Regex.Replace(removingWords, "[^a-zA-Z0-9_.\n]+", "", RegexOptions.Compiled);
                 blackList = resultForRemovingList.Split(' ', ',', '\n').ToList();
             }
-            StreamReader reader2 = new StreamReader(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\12.RemoveWords\textfile.txt");
+            StreamReader reader2 = new StreamReader(@"..\..\textfile.txt");
             string textForRemoving = reader2.ReadToEnd();
             string result = textForRemoving;
 
@@ -53,6 +53,10 @@ class RemoveWords
             Console.WriteLine(ex.Message);
         }
         catch (FileNotFoundException ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+        catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
         }

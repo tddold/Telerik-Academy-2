@@ -14,8 +14,8 @@ class ConcatenateTextFiles
     static void Main()
     {
         var readers = new List<StreamReader>();
-        var first = new StreamReader(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\02.ConcatenateTextFiles\textfile.txt");
-        var second = new StreamReader(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\02.ConcatenateTextFiles\textfile2.txt");
+        var first = new StreamReader(@"..\..\textfile.txt");
+        var second = new StreamReader(@"..\..\textfile2.txt");
         readers.Add(first);
         readers.Add(second);      
         StringBuilder sb = new StringBuilder();
@@ -29,7 +29,7 @@ class ConcatenateTextFiles
                 sb.Append("\n");
                 if (i == 1)
                 {
-                    StreamWriter streamWriter = new StreamWriter(@"D:\Telerik\Telerik-Academy\Csharp-Part2\08.TextFiles\02.ConcatenateTextFiles\all.txt");
+                    StreamWriter streamWriter = new StreamWriter(@"..\..\all.txt");
                     using (streamWriter)
                     {
                         streamWriter.Write(sb.ToString());
