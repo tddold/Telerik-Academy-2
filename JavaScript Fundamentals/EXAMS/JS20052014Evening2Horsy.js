@@ -1,5 +1,5 @@
 function solve(params) {
-    var dims = params[0].split(' '), xCounter, yCounter,matrix=[],matrixValues=[],posX,posY, inMatrix = true,weeds= 0,jumps=0;
+    var dims = params[0].split(' '), xCounter, yCounter,matrix=[],matrixValues=[],posX,posY, inMatrix = true,weeds= 0,jumps= 0, used =[];
     for (xCounter = 0;xCounter<dims[0];xCounter+=1){
         matrix[xCounter]=[];
         matrixValues[xCounter]=[];
@@ -11,7 +11,7 @@ function solve(params) {
     posX = dims[0] -1;
     posY = dims[1] -1;
     weeds = matrixValues[posX][posY];
-    matrixValues[posX][posY] = 'visited';
+    used[posX +' '+posY] = 'visited';
     while (inMatrix){
         switch(matrix[posX][posY]){
             case '1':posX=posX-2;posY=posY+1;break;
@@ -32,14 +32,14 @@ function solve(params) {
             console.log("Go go Horsy! Collected %d weeds",weeds);
             break;
         }
-        if ( matrixValues[posX][posY] === 'visited'){
+        if (used[posX + ' '+posY] === 'visited'){
             jumps= jumps+1;
             console.log("Sadly the horse is doomed in %d jumps",jumps)
             break;
         }
         jumps+=1;
         weeds = weeds +matrixValues[posX][posY];
-        matrixValues[posX][posY] = 'visited';
+        used[posX + ' '+posY] = 'visited';
 
     }
 

@@ -47,3 +47,6 @@ function input2(){
         ;
     Solve(params)
 }
+
+
+console.log(Solve(['coin 0','coin 0', '     Coin     5    ', 'coin 10', 'coin 20', 'coin 50', 'coin 100', 'coin 200', 'coin 500','cigars 1']));

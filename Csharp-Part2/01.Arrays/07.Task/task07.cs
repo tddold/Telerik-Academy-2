@@ -9,8 +9,8 @@ using System.Collections.Generic;
 class selectionsort
 {
     static void Main()
-    {        
-        int[] arr = { 6, 1, 4, 3, 0, 3, 6, 4, 5 };
+    {
+        int[] arr = { 2, 341, -22, 11, 44 };
         //int[] arr = { -6, -1, 4, 3, 0, 3, 6, 14, 15 };
         int minValue = arr[0];
         int count = 0;
